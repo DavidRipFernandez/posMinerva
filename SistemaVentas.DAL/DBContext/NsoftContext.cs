@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using SistemaVenta.Entity;
 
-namespace SistemaVenta.DAL.DBContext;
+namespace SistemaVentas.DAL.DBContext;
 
 public partial class NsoftContext : DbContext
 {
