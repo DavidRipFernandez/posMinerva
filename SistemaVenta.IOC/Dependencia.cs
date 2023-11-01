@@ -9,8 +9,8 @@ using SistemaVentas.DAL.DBContext;
 using Microsoft.EntityFrameworkCore;
 using SistemaVentas.DAL.Implementation;
 using SistemaVentas.DAL.Interfaces;
-//using SistemaVenta.BLL.Interfaces;
-//using SistemaVenta.BLL.Implementation;
+using SistemaVenta.BLL.Interfaces;
+using SistemaVenta.BLL.Implementation;
 
 // se agregaran todas las dependecias que se usaran en este clase
 namespace SistemaVenta.IOC
@@ -30,6 +30,8 @@ namespace SistemaVenta.IOC
             //como es generico no se con que clase o entidad estaré trabajando, es por eso que utilizo AddTrasient, es decir que varia sus valores.
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IVentaRepository, VentaRepository>();
+
+            services.AddScoped<ICorreoService, CorreoService>();
 
         }
     }
